@@ -20,13 +20,15 @@ const TechStack: React.FC = () => {
                     autoplay={{ delay: 2000, disableOnInteraction: false }}
                     loop={true}
                     slidesPerView={"auto"}
-                    spaceBetween={20}
+                    spaceBetween={30}
                     centeredSlides={false}
                     breakpoints={{
-                        320: { slidesPerView: 2 },
-                        480: { slidesPerView: 3 },
-                        768: { slidesPerView: 4 },
-                        1024: { slidesPerView: 6 }
+                        320: { slidesPerView: 2, spaceBetween: 15 },
+                        480: { slidesPerView: 3, spaceBetween: 20 },
+                        768: { slidesPerView: 4, spaceBetween: 25 },
+                        1024: { slidesPerView: 5, spaceBetween: 30 },
+                        1440: { slidesPerView: 6, spaceBetween: 35 },
+                        1920: { slidesPerView: 7, spaceBetween: 40 },
                     }}
                     aria-label="Carrossel de tecnologias utilizadas no projeto"
                 >
