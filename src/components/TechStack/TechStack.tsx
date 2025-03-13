@@ -1,6 +1,5 @@
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
 const techs = [
     "HTML", "CSS", "JavaScript", "React", "Tailwind", "TypeScript", "Zustand",
@@ -32,10 +31,12 @@ const TechStack: React.FC = () => {
                     aria-label="Carrossel de tecnologias utilizadas no projeto"
                 >
                     {techs.map((tech) => (
-                        <SwiperSlide key={tech} className="flex justify-center">
-                            <div className="w-32 h-32 flex items-center justify-center rounded-full bg-[radial-gradient(circle,_rgba(10,9,32,0.5)_0%,_rgba(100,109,240,0.8)_100%)] shadow-[0_0_15px_rgba(100,109,240,0.6)]">
-                                <p className="text-lg font-semibold">{tech}</p>
+                        <SwiperSlide key={tech} className="flex justify-center border-none">
+                            <div className="relative flex items-center justify-center w-[150px] h-[150px]">
+                                <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,_rgba(100,109,240,0.5)_8%,_rgba(30,30,80,0.3)_60%,_rgba(10,9,32,0)_70%)] shadow-[0_0_20px_8px_rgba(100,109,240,0.5)])]"></div>
+                                <p className="relative text-lg font-semibold text-white">{tech}</p>
                             </div>
+
                         </SwiperSlide>
                     ))}
                 </Swiper>
