@@ -8,7 +8,7 @@ const techs = [
 
 const TechStack = () => {
     return (
-        <section className="py-16 text-center text-white">
+        <section id="Tecnologias" className="py-16 text-center text-white">
             <h2 className="text-3xl font-bold">Impulsionados por tecnologia</h2>
             <p className="text-lg text-gray-400 mt-2">
                 As linguagens de programação que fazem nosso projeto ganhar vida
