@@ -9,7 +9,7 @@ const NavLinks = () => {
   const closedClass = 'max-h-0 overflow-hidden hb:relative hb:h-fit hb:max-h-fit hb:w-fit hb:bg-transparent'
   const links = ['Equipes', 'Projetos', 'Tecnologias']
 
-  const { isOpen } = useContext(NavbarContext)
+  const { isOpen, setIsOpen } = useContext(NavbarContext)
 
   return (
     <ul
@@ -34,7 +34,11 @@ const NavLinks = () => {
                 hb:decoration-2 
                 hb:ease-in-out
                 `}
-                href={`#${link}`}>
+                href={`#${link}`}
+                onClick={() => {
+                  setIsOpen(false)
+                }}
+                >
                 {link}
               </a>
               <hr className="mt-2 border-fusion-l-blue hb:hidden" />

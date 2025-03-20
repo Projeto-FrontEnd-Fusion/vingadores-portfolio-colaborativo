@@ -1,13 +1,14 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import "./App.css";
+import Footer from './components/Footer/Footer';
 import FormDescription from "./components/FormDescription/FormDescription";
 import Forms from "./components/Forms/Forms";
+import MemberCarousel from './components/MemberCarousel/MemberCarousel';
+import MemberProjects from './components/MemberProjects/MemberProjects';
 import MembersDescription from "./components/MembersDescription/MembersDescription";
 import Navbar from "./components/Navbar/Navbar";
 import SectionPresentation from "./components/SectionPresentation/SectionPresentation";
-import MemberCarousel from './components/MemberCarousel/MemberCarousel';
-import MemberProjects from './components/MemberProjects/MemberProjects';
-import Footer from './components/Footer/Footer';
+import TechStack from './components/TechStack/TechStack';
 
 function App() {
   const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ function App() {
             <MembersDescription />
             <MemberCarousel />
             <MemberProjects />
+            <TechStack />
           </section>
 
           <section className="w-full flex flex-col justify-center items-center gap-8 lg:flex-row lg:items-start">
