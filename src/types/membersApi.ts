@@ -10,7 +10,7 @@ interface IGetMemberResponse {
       url: string
     }
   ]
-  skills: [string]
+  skills: {id: string, name: string}[]
   projects: [{
     id: string
     project_cover: string

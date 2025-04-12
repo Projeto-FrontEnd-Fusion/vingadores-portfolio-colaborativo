@@ -25,16 +25,18 @@ const MemberInfo = ({ profile_image, name, stack }: MemberInfoProps) => {
 }
 
 interface MemberSkillsProps {
-  skills: string[]
+  skills: { id: string, name: string }[]
 }
 const MemberSkills = ({ skills }: MemberSkillsProps) => {
-  return (
-    <div className="flex items-center justify-center">
-      {skills.map((skill) => {
-        return <i key={skill} aria-label={skill} className={`devicon-${skill}-plain colored p-2`} style={{ fontSize: "20px" }}></i>
-      })}
-    </div>
-  )
+  if (skills) {
+    return (
+      <div className="flex items-center justify-center">
+        {skills.map(({ id, name }) => {
+          return <i key={id} aria-label={name} className={`devicon-${name}-plain colored p-2`} style={{ fontSize: "20px" }}></i>
+        })}
+      </div>
+    )
+  }
 }
 
 interface MemberProfilesProps {
